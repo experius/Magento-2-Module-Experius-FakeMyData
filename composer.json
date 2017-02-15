@@ -1,0 +1,27 @@
+{
+    "name": "experius/module-fakemydata",
+    "description": "Magento 2 Customer Data Faker. Replaces existing customer data for fake data. Used for develop and staging environments.",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        },
+        {
+            "name": "Derrick Heesbeen",
+            "email": "derrick@experius.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "fzaninotto/faker": "1.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Experius\\FakeMyData\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
