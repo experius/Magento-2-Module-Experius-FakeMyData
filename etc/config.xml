@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <fakemydata>
+            <general>
+                <excluded_email_domains>experius.nl</excluded_email_domains>
+                <fake_email_domain>experius.nl</fake_email_domain>
+                <fake_email_prefix/>
+                <password>F@k3MyD@t@</password>
+            </general>
+        </fakemydata>
+    </default>
+</config>

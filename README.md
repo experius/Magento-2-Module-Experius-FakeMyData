@@ -10,6 +10,11 @@ Effects Following Tables
 - customer_address_entity
 - sales_order
 - sales_order_grid
+- sales_invoice_grid
+- sales_creditmemo_grid
+- sales_shipment_grid
+- qoute
+- newsletter
 
 php bin/magento experius_fakemydata:fakeall
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="fakemydata" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+            <label>Fakemydata</label>
+            <tab>advanced</tab>
+            <resource>Experius_FakeMyData::config_experius_fakemydata</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>general</label>
+                <field id="excluded_email_domains" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                    <label>Excluded Domains</label>
+                    <comment>(comma separated) Data with e-mail addresses with these domains will not be changed</comment>
+                </field>
+                <field id="fake_email_domain" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                    <label>Fake Email Domain</label>
+                    <comment>(comma separated) Is used for the fake email addresses (In case its the same as Excluded domain. Data will only be changed once)</comment>
+                </field>
+                <field id="fake_email_prefix" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                    <label>Fake Email Prefix</label>
+                    <comment>for example john+</comment>
+                </field>
+                <field id="password" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                    <label>Password</label>
+                    <comment>Will be used for all changed customer accounts</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
