@@ -7,6 +7,7 @@
                 <fake_email_domain>experius.nl</fake_email_domain>
                 <fake_email_prefix/>
                 <password>F@k3MyD@t@</password>
+                <customprovider>0</customprovider>
             </general>
         </fakemydata>
     </default>

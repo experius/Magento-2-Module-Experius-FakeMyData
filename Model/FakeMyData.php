@@ -31,6 +31,8 @@ class FakeMyData {
 
     private $password;
 
+    private $customProvider = false;
+
     private $excludedEmailDomains;
 
     private $fakedData= [];
@@ -113,6 +115,13 @@ class FakeMyData {
         return $this->password;
     }
 
+    public function getCustomProvider(){
+        if(!$this->customProvider){
+            $this->customProvider = $this->scopeConfig->getValue('fakemydata/general/customprovider');
+        }
+        return $this->customProvider;
+    }
+
     public function getSelect($tableName,$excludeEmailField='email',$join){
         $select = $this->connection->select();
         $select->from($tableName,'*');
@@ -167,6 +176,12 @@ class FakeMyData {
 
             $faker = $this->faker->create($locale);
             $faker->seed($seed);
+
+            if($this->getCustomProvider()) {
+                $customProvider = $this->getCustomProvider();
+                $class = "\\Experius\\FakeMyData\\Faker\\Provider\\" . $customProvider . "\\Person";
+                $faker->addProvider(new $class($faker));
+            }
 
             $firstname = $faker->firstName;
             $lastname = $faker->lastName;
